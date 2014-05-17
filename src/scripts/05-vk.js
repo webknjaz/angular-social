@@ -3,7 +3,7 @@ app.directive('ngSocialVk', function() {
 
     var options = {
         counter:{
-            url: 'http://vkontakte.ru/share.php?act=count&url={url}&index={index}',
+            url: 'https://vk.com/share.php?act=count&url={url}&index={index}',
             get: function(jsonUrl, deferred, $http) {
                 if (!options._) {
                     options._ = [];
@@ -21,7 +21,7 @@ app.directive('ngSocialVk', function() {
             }
         },
         popup: {
-            url: 'http://vk.com/share.php?url={url}&title={title}&description={description}&image={image}',
+            url: 'https://vk.com/share.php?url={url}&title={title}&description={description}&image={image}',
             width: 550,
             height: 330
         },
