@@ -36,7 +36,7 @@ if (!filter_var($_GET['url'], FILTER_VALIDATE_URL)) {
     exit('Invalid url');
 }
 switch ($type) {
-    case 'google-plus':
+    case 'google\-plus':
         $content = fetch('https://plusone.google.com/u/0/_/+1/fastbutton?hl=en&url=' . $url . '&count=true');
 
         $dom = new DOMDocument;
