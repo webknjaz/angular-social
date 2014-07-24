@@ -64,9 +64,10 @@ switch ($type) {
 $response = json_encode($json);
 
 if (isset($_GET['callback'])) {
-    $response = $_GET['callback'] . '(' . $response . ')';
+    $response = $_GET['callback'] . '(' . $response . ');';
+    header('content-type: application/javascript; charset=UTF-8');
+} else {
+    header('content-type: application/json; charset=UTF-8');
 }
-
-header('content-type: application/json; charset=UTF-8');
 
 echo $response;
